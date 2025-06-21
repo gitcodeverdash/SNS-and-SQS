@@ -7,4 +7,4 @@ server:
 
 aws:
   region: ap-south-1
-  sqs-queue-url:
+  sqs-queue-url: ${SQSQUEUE_URL}

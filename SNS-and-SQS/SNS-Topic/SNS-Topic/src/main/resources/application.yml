@@ -4,4 +4,4 @@ spring:
 
 aws:
   region: ap-south-1
-  sns-topic-arn: 
+  sns-topic-arn: ${SNS_ARN}

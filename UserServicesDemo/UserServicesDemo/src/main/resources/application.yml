@@ -1,0 +1,85 @@
+#server:
+#  port: 8081
+  #error:
+  #  include-message: always
+
+spring:
+  application:
+    name: USER-SERVICE
+
+  config:
+    import: configserver:http://localhost:8888
+
+ # cloud:
+ #   config:
+  #    discovery:
+   #     enabled: true
+    #    service-id: CONFIG-SERVER
+
+  #datasource:
+   # url: jdbc:mysql://localhost:3306/microservices
+    #username: root
+    #password: Passw0rd@2
+    #driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+
+  #jpa:
+   # hibernate:
+    #  ddl-auto: update  # or validate/create/create-drop/none
+    #show-sql: true
+    #properties:
+     # hibernate:
+      #  dialect: org.hibernate.dialect.MySQL8Dialect
+
+#eureka:
+# instance:
+#    prefer-ip-address: true   # ✅ Registers service using IP instead of hostname
+#  client:
+#    register-with-eureka: true   # ✅ Registers this service with Eureka
+#    fetch-registry: true         # ✅ Fetches registry info from Eureka
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/   # ✅ Eureka server location
+
+#resilience4j:
+#   thread-pool-bulkhead:
+#     instances:
+#       hotelServiceBreaker:
+ #        coreThreadPoolSize: 2
+ #        maxThreadPoolSize: 4
+ #        queueCapacity: 10
+
+  # retry:
+   #  instances:
+   #    hotelServiceBreaker:
+    #     maxAttempts: 3
+     #    waitDuration: 1s
+      #   retryExceptions:
+       #    - java.lang.Exception
+
+   #ratelimiter:
+    # instances:
+     #  hotelServiceBreaker:
+      #   limitForPeriod: 5
+       #  limitRefreshPeriod: 10s
+        # timeoutDuration: 0
+
+
+#  circuitbreaker:
+#    instances:
+#      hotelServiceBreaker:
+#        register-health-indicator: true
+#        sliding-window-size: 5
+#        slidingWindowType: COUNT_BASED
+#        minimum-number-of-calls: 5
+#        failure-rate-threshold: 50
+#        wait-duration-in-open-state: 10s
+#        permitted-number-of-calls-in-half-open-state: 3
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#  endpoint:
+#    health:
+#      show-details: always

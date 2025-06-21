@@ -1,0 +1,7 @@
+spring:
+  application:
+    name : SNS-Topic
+
+aws:
+  region: ap-south-1
+  sns-topic-arn: arn:aws:sns:ap-south-1:739507488230:demo-topic

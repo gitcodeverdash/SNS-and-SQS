@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: SQS-Queue
+
+server:
+  port: 8081
+
+aws:
+  region: ap-south-1
+  sqs-queue-url: https://sqs.ap-south-1.amazonaws.com/739507488230/demo-queue

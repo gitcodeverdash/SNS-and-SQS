@@ -7,4 +7,4 @@ server:
 
 aws:
   region: ap-south-1
-  sqs-queue-url: ${SQSQUEUE_URL}
+  sqs-queue-url: https://sqs.ap-south-1.amazonaws.com/739507488230/demo-queue
